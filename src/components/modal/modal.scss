@@ -1,0 +1,29 @@
+.test{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+
+  .modalContainer{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.6;
+
+    position: absolute;
+    z-index: 1;
+  }
+
+  .modalCard{
+    width: 90vw;
+    height: 70vh;
+    background-color: white;
+    border-radius: 10px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 4242;
+  }
+}

@@ -1,0 +1,19 @@
+.navOpenContainer{
+  background-color: aqua;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 9999;
+  text-align: center;
+
+  i{
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    font-size: 30px;
+  }
+
+}

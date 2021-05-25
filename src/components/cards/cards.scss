@@ -9,8 +9,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  z-index: 9;
   margin-bottom: 100px;
+  z-index: 2;
 
   p{
     width: 90%;
@@ -19,16 +19,5 @@
 
   i{
     font-size: 30px;
-  }
-
-  .cardsBelow{
-    background-color: white;
-    box-shadow: 0 0 15px #e4e4e4;
-    border-radius: 10px;
-    width: 70vw;
-    height: 150px;
-    position: absolute;
-    bottom: -50px;
-    z-index: 0;
   }
 }

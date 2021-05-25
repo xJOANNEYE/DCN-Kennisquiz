@@ -15,8 +15,6 @@ const Cards = (props) => {
         }
     };
 
-
-
     return(
        <div className='cardsContainter'>
            <div className={`categorie ${props.categorie}`}></div>
@@ -26,7 +24,6 @@ const Cards = (props) => {
 
            <h1>{props.title}</h1>
            <p>{props.question}</p>
-           <div className='cardsBelow'></div>
        </div>
     );
 };

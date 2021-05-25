@@ -1,0 +1,17 @@
+.navWrapper{
+  width: 100vw;
+  color: #0B656C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h3{
+    position: relative;
+  }
+
+  i{
+    position: absolute;
+    right: 25px;
+    font-size: 25px;
+  }
+}

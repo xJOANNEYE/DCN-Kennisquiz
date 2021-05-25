@@ -1,0 +1,15 @@
+.buttonBorderContainer{
+  background-color: white;
+  width: 250px;
+  padding: 25px;
+  border: 2px solid #0B656C;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  color: #0B656C;
+
+  i{
+    font-size: 20px;
+    margin-right: 10px;
+  }
+}
