@@ -1,6 +1,10 @@
 .test{
   width: 100vw;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
 
   .modalContainer{
@@ -8,7 +12,6 @@
     height: 100vh;
     background-color: black;
     opacity: 0.6;
-
     position: absolute;
     z-index: 1;
   }
@@ -23,7 +26,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    z-index: 4242;
+    z-index: 9;
+
+    img{
+      width: 150px;
+    }
   }
 }
