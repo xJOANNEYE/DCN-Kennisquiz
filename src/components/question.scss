@@ -1,0 +1,33 @@
+h2{
+  width: 80vw;
+  text-align: center;
+}
+
+.cardsBackground{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-image: linear-gradient(#0e7982, #14ebfb);
+}
+
+.roundButtonBackground{
+  width: 140vw;
+  height: 28vh;
+  position: fixed;
+  border-radius: 50%  50% 0 0 ;
+  bottom: 0;
+  background-color: white;
+}
+
+.endBackground{
+  z-index: 0;
+  width: 100vw;
+  height: 75vh;
+  position: fixed;
+  top: 0;
+  //background-color: lightblue;
+  background-size: 150%;
+  background-position: -50px;
+}
+

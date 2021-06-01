@@ -1,11 +1,13 @@
 .navWrapper{
   width: 100vw;
+  padding-top: 9px;
   color: #0B656C;
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
   top: 0;
+  z-index: 99;
 
   h3{
     position: relative;

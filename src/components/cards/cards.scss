@@ -4,13 +4,16 @@
   border-radius: 10px;
   width: 85vw;
   height: 50vh;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin-bottom: 100px;
   z-index: 2;
+
+  h1{
+    text-align: center;
+  }
 
   p{
     width: 90%;

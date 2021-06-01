@@ -5,20 +5,21 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: fixed;
+  z-index: 9;
 
   .modalContainer{
     width: 100vw;
     height: 100vh;
     background-color: black;
-    opacity: 0.6;
+    opacity: 0.7;
     position: absolute;
     z-index: 1;
   }
 
   .modalCard{
     width: 90vw;
-    height: 70vh;
+    height: 75vh;
     background-color: white;
     border-radius: 10px;
     top: 0;

@@ -7,6 +7,7 @@
     justify-content: center;
     align-items: center;
     color: white;
+    z-index: 2;
 
   i{
     font-size: 30px;
@@ -14,10 +15,10 @@
 }
 
 .greenBackground{
-  background-color: green;
+  background-color: #09CE40;
 }
 
 .redBackground{
-  background-color: red;
+  background-color: #E74117;
 }
 
