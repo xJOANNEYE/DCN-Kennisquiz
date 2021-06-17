@@ -1,23 +1,35 @@
 import "./question.scss";
 
-//useParams = parameters gebruiken
-import {useParams} from "react-router-dom"
-import ButtonColored from "./buttonColored/buttonColored";
-import React, {useContext} from "react";
-import ButtonBorder from "./buttonBorder/buttonBorder";
-import TextInput from "./textInput/textInput";
+import React, {useCallback, useContext, useState} from "react";
 import Cards from "./cards/cards";
 import ButtonRound from "./buttonRound/buttonRound";
 import Modal from "./modal/modal";
-import Image from "../image/slingers.png"
-import {ApiContext} from "../apiContextProvider";
 
 const Question = (props) => {
-    const [active, setActive] = React.useState(false);
+    const [active, setActive] = useState(false);
+    const [checker, setChecker] = useState(false);
 
-    const renderQuestion = Math.floor(Math.random() * 10) + 1;
 
-    console.log(props.post);
+
+
+    const checkQuestion = (answer) =>  {
+        // console.log(answer);
+        // console.log(props.post.acf.questionchecker);
+
+        //Checkt hoeveel vragen er goed zijn
+        if(answer === props.post.acf.questionchecker){
+            setChecker(true);
+            props.setScore (props.score +1)
+        } else{
+            setChecker(false);
+        }
+
+        setActive(true);
+    };
+
+
+
+
     return (
         <>
             <div className='cardsBackground'></div>
@@ -28,13 +40,15 @@ const Question = (props) => {
                 <div className='cardsBelow'></div>
             </div>
 
-            <Modal active={active} setActive={setActive} title={props.post.acf.modaltitelfault} text={props.post.acf.modaltextfault} buttonLink={renderQuestion} />
+            {/*model*/}
+            <Modal active={active} setActive={setActive} title={checker?props.post.acf.modaltitelgood:props.post.acf.modaltitelfault} text={checker?props.post.acf.modaltextgood:props.post.acf.modaltextfault} buttonLink={ props.renderQuestion}  />
 
             <div className='roundButtonBackground'></div>
 
-            <div className='buttonWrapper' onClick={() => setActive(true)}>
-                <ButtonRound background='greenBackground' type='yes' onClick={() => setActive(true)}/>
-                <ButtonRound background='redBackground' type='no' onClick={() => setActive(true)}/>
+            <div className='buttonWrapper'>
+                <ButtonRound background='greenBackground' type='yes' checkQuestion={checkQuestion} answer={true}/>
+                <ButtonRound background='redBackground' type='no' checkQuestion={checkQuestion}  answer={false}/>
+                }/>
             </div>
         </>
     );

@@ -3,9 +3,11 @@ import * as React from "react";
 
 const TextInput = (props) => {
 
+    console.log(props.name);
+
     return(
         <form action="/action_page.php">
-            <input type="text" id="usersName" name="usersName" placeholder={`${props.placeholder}`}></input>
+            <input onChange={event => props.setName(event.target.value)} type="text" id="usersName" name="usersName" placeholder={`${props.placeholder}`}></input>
         </form>
     );
 };
