@@ -1,16 +1,15 @@
-.buttonColoredContainer2{
-  background-color: #0B656C;
+.buttonBorderAgainContainer{
+  background-color: white;
   width: 250px;
   padding: 25px;
+  border: 2px solid #0B656C;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  z-index: 5;
+  color: #0B656C;
+  z-index: 10;
   position: absolute;
   bottom: 100px;
-  left: 50%;
   transform: translateX(-50%);
-  margin-bottom: 10px;
 }

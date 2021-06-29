@@ -7,7 +7,7 @@ const TextInput = (props) => {
 
     return(
         <form action="/action_page.php">
-            <input onChange={event => props.setName(event.target.value)} type="text" id="usersName" name="usersName" placeholder={`${props.placeholder}`}></input>
+            <input autocomplete="off" onChange={event => props.setName(event.target.value)} type="text" id="usersName" name="usersName" placeholder={`${props.placeholder}`}></input>
         </form>
     );
 };

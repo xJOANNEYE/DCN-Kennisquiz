@@ -1,6 +1,7 @@
 .cardsContainter {
   background-color: white;
   box-shadow: 0 0 5px #d8d8d8;
+  border: 3px solid white;
   border-radius: 10px;
   width: 85vw;
   height: 50vh;
@@ -10,6 +11,18 @@
   flex-direction: column;
   margin-bottom: 100px;
   z-index: 2;
+  position: relative;
+  
+  .score{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    width: 60px;
+    height: 70px;
+    text-align: center;
+    color: white;
+    z-index: 10;
+  }
 
   h1{
     text-align: center;
@@ -23,4 +36,27 @@
   i{
     font-size: 30px;
   }
+
+  img{
+    z-index: 9;
+    position: absolute;
+    top: -10px;
+    right: 10px;
+  }
+}
+
+.backgroundBronze{
+  border: 3px solid #a27034;
+}
+
+.backgroundSilver{
+  border: 3px solid #B7BEC8;
+}
+
+.backgroundGold{
+  border: 3px solid #F8B64C;
+}
+
+.displayNone{
+  //display: none;
 }

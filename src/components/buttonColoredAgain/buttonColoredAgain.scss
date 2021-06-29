@@ -1,4 +1,4 @@
-.buttonColoredContainer2{
+.buttonColoredContainer{
   background-color: #0B656C;
   width: 250px;
   padding: 25px;
@@ -8,9 +8,7 @@
   align-items: center;
   color: white;
   z-index: 5;
-  position: absolute;
-  bottom: 100px;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-bottom: 10px;
+  position: relative;
+  bottom: 70px;
+  left: 0;
 }

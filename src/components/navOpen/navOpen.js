@@ -2,6 +2,7 @@ import "./navOpen.scss";
 import * as React from "react";
 import ButtonColored from "../buttonColored/buttonColored";
 import {Link} from "react-router-dom";
+import ButtonColoredWhite from "../buttonColoredWhite/buttonColoredWhite";
 
 const NavOpen = (props) => {
 
@@ -17,7 +18,7 @@ const NavOpen = (props) => {
                 </div>
 
                 <div class='buttonNavOpen'>
-                    <ButtonColored text='Zoek een passende dietist' background='#ffffff' color='#0E656C'/>
+                    <a href="https://dietist.org/" target='_blank'><ButtonColoredWhite text='Zoek een passende dietist'/></a>
                 </div>
 
             </div>

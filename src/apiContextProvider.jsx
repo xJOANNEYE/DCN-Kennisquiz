@@ -3,26 +3,54 @@ import React, { createContext, useState, useEffect } from 'react'
 export const ApiContext = createContext();
 
 const ApiContextProvider = props => {
-    const [posts, setPosts] = useState([]);
+    const [nierFalen, setNierFalen] = useState([]);
+    const [copd, setCopd] = useState([]);
+    const [diabetes, setDiabetes] = useState([]);
 
-    const siteUrl = 'https://joanneye.nl/kennisquizcms/wp-json/wp/v2/questions';
+    const siteUrl1 = 'https://joanneye.nl/kennisquizcms/wp-json/wp/v2/nierfalen';
+    const siteUrl2 = 'https://joanneye.nl/kennisquizcms/wp-json/wp/v2/copd';
+    const siteUrl3 = 'https://joanneye.nl/kennisquizcms/wp-json/wp/v2/diabetes';
 
     useEffect(() => {
-        async function loadposts() {
-            const response = await fetch(siteUrl);
+        async function loadcopd() {
+            const response = await fetch(siteUrl2);
             if (!response.ok) {
                 console.log('error');
                 return
-            };
+            }
 
             const posts = await response.json();
-            setPosts(posts)
+            setCopd(posts)
         }
-        loadposts()
+        async function loadnierfalen() {
+            const response = await fetch(siteUrl1);
+            if (!response.ok) {
+                console.log('error');
+                return
+            }
+
+            const posts = await response.json();
+            setNierFalen(posts)
+        }
+        async function loaddiabetes() {
+            const response = await fetch(siteUrl3);
+            if (!response.ok) {
+                console.log('error');
+                return
+            }
+
+            const posts = await response.json();
+            setDiabetes(posts)
+        }
+
+        loadcopd();
+        loadnierfalen();
+        loaddiabetes();
+
     }, []);
 
     return (
-        <ApiContext.Provider value={{ posts }}>
+        <ApiContext.Provider value={{ nierFalen, copd, diabetes }}>
             {props.children}
         </ApiContext.Provider>
     )

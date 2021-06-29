@@ -10,14 +10,14 @@ const Question = (props) => {
     const [checker, setChecker] = useState(false);
 
     const checkQuestion = (answer) =>  {
-        //Checkt hoeveel vragen er goed zijn
-        if(answer === props.post.acf.questionchecker){
+        props.setCount(props.count +1);
+        if(answer === props.nierFalen.acf.questionchecker){
             setChecker(true);
             props.setScore (props.score +1)
         } else{
             setChecker(false);
+            props.forceUpdate()
         }
-
         setActive(true);
     };
 
@@ -26,12 +26,11 @@ const Question = (props) => {
             <div className='cardsBackground'></div>
 
             <div className='cardsWrapper'>
-                {/*data ophalen en invoeren -> {post.acf.titel}*/}
-                <Cards categorie='dietician' title={props.post.acf.titel} question={props.post.acf.question}/>
+                <Cards categorie={props.nierFalen.acf.categorie} title={props.nierFalen.acf.titel} question={props.nierFalen.acf.question}/>
                 <div className='cardsBelow'></div>
             </div>
 
-            <Modal active={active} setActive={setActive} title={checker?props.post.acf.modaltitelgood:props.post.acf.modaltitelfault} text={checker?props.post.acf.modaltextgood:props.post.acf.modaltextfault} buttonLink={ props.renderQuestion}  />
+            <Modal checker={checker} oanswer={true} active={active} setActive={setActive} title={checker ? props.nierFalen.acf.modaltitelgood : props.nierFalen.acf.modaltitelfault} text={checker ? props.nierFalen.acf.modaltextgood : props.nierFalen.acf.modaltextfault} buttonLink={ props.renderQuestion}  />
 
             <div className='roundButtonBackground'></div>
 
