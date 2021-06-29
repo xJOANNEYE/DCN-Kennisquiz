@@ -20,7 +20,7 @@ const Cards = (props) => {
            {
                renderCategorieIcon()
            }
-           <h1>{props.title} {props.name}</h1>
+            <h1>{props.title} <br></br> {props.name}</h1>
            <p>{props.question}</p>
 
 

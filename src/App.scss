@@ -51,4 +51,7 @@
 
 .tekstOmhoog{
   height: 40vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
