@@ -7,9 +7,9 @@ const ApiContextProvider = props => {
     const [copd, setCopd] = useState([]);
     const [diabetes, setDiabetes] = useState([]);
 
-    const siteUrl1 = 'https://joanneye.nl/kennisquizcms/wp-json/wp/v2/nierfalen';
-    const siteUrl2 = 'https://joanneye.nl/kennisquizcms/wp-json/wp/v2/copd';
-    const siteUrl3 = 'https://joanneye.nl/kennisquizcms/wp-json/wp/v2/diabetes';
+    const siteUrl1 = 'https://joanneye.nl/kennisquiz-dcn/wp-json/wp/v2/nierfalen';
+    const siteUrl2 = 'https://joanneye.nl/kennisquiz-dcn/wp-json/wp/v2/copd';
+    const siteUrl3 = 'https://joanneye.nl/kennisquiz-dcn/wp-json/wp/v2/diabetes';
 
     useEffect(() => {
         async function loadcopd() {
