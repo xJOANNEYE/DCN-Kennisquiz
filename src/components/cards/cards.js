@@ -20,13 +20,13 @@ const Cards = (props) => {
            {
                renderCategorieIcon()
            }
-           <h1>{props.title} {props.naam}</h1>
+           <h1>{props.title} {props.name}</h1>
            <p>{props.question}</p>
 
 
            <div className="displayNone" >
                <div className="score">{props.score}<br></br>Goed</div>
-               <div className="test3"><img src={props.scoreImage} alt="image1"></img></div>
+               <div className="test3"><img src={props.scoreImage} alt=""></img></div>
            </div>
        </div>
     );

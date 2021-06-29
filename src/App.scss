@@ -1,0 +1,54 @@
+.cardsWrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.cardsBelow{
+  background-color: white;
+  //box-shadow: 0 0 15px #e4e4e4;
+  border-radius: 10px;
+  width: 70vw;
+  height: 70px;
+  position: absolute;
+  bottom: 60px;
+  z-index: 0;
+}
+
+.buttonWrapper {
+  width: 65vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.moreInfo{
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.backgroundConfetti{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
+
+  img{
+    height: 120vw;
+    position: absolute;
+    top: -40px;
+    left: -100px;
+    z-index: 0;
+  }
+}
+
+.tekstOmhoog{
+  height: 40vh;
+}
