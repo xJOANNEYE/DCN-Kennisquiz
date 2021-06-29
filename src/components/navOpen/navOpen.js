@@ -17,7 +17,7 @@ const NavOpen = (props) => {
                     <Link to={'/contact'}><h2>Contactgegevens</h2></Link>
                 </div>
 
-                <div class='buttonNavOpen'>
+                <div className='buttonNavOpen'>
                     <a href="https://dietist.org/" target='_blank'><ButtonColoredWhite text='Zoek een passende dietist'/></a>
                 </div>
 
